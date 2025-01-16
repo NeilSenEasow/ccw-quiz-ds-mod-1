@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Brain, Trophy, RotateCcw, PlayCircle, Target, Award, Clock, LightbulbIcon } from 'lucide-react';
 import { ProgressBar } from './components/ProgressBar';
 import { QuizOption } from './components/QuizOption';
@@ -68,9 +68,9 @@ function App() {
           <div className="flex justify-center mb-6">
             <Brain className="w-16 h-16 text-blue-600" />
           </div>
-          <h1 className="text-4xl font-bold mb-4 text-gray-800">Knowledge Quest</h1>
-          <p className="text-lg text-gray-600 mb-8">Test your knowledge with our interactive quiz!</p>
-          
+          <h1 className="text-4xl font-bold mb-4 text-gray-800">DBMS Module 1 Quiz</h1>
+          <p className="text-lg text-gray-600 mb-8">Challenge yourself with this interactive Database Management quiz!</p>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <div className="bg-blue-50 p-4 rounded-lg">
               <Target className="w-8 h-8 text-blue-600 mx-auto mb-2" />
@@ -78,14 +78,14 @@ function App() {
             </div>
             <div className="bg-blue-50 p-4 rounded-lg">
               <Award className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-              <h3 className="font-semibold text-gray-800">Instant Feedback</h3>
+              <h3 className="font-semibold text-gray-800">Detailed Explanations</h3>
             </div>
             <div className="bg-blue-50 p-4 rounded-lg">
               <Clock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-              <h3 className="font-semibold text-gray-800">Time Your Pace</h3>
+              <h3 className="font-semibold text-gray-800">Track Your Progress</h3>
             </div>
           </div>
-          
+
           <button
             onClick={handleStartQuiz}
             className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
@@ -112,14 +112,14 @@ function App() {
               {state.score}/{questions.length}
             </p>
             <p className="text-gray-600 mb-8">
-              You got {state.score} questions correct out of {questions.length}!
+              You answered {state.score} questions correctly out of {questions.length}.
             </p>
             <button
               onClick={resetQuiz}
               className="flex items-center justify-center w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"
             >
               <RotateCcw className="w-5 h-5 mr-2" />
-              Try Again
+              Retry Quiz
             </button>
           </div>
         </div>
@@ -135,7 +135,7 @@ function App() {
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center">
             <Brain className="w-8 h-8 text-blue-600 mr-2" />
-            <h1 className="text-xl font-bold">Quiz Game</h1>
+            <h1 className="text-xl font-bold">DBMS Module 1</h1>
           </div>
           <div className="text-sm text-gray-500">
             Question {state.currentQuestion + 1} of {questions.length}
