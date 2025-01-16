@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does DBMS stand for?",
+      "options": ["Database Management System", "Data Manipulation System", "Database Monitoring Service", "Data Backup Management System"],
+      "correctAnswer": 0
+    },
+    {
+      "id": 2,
+      "question": "Which of the following is a primary key candidate?",
+      "options": ["A unique attribute", "A foreign key", "A composite key", "A derived attribute"],
+      "correctAnswer": 0
+    },
+    {
+      "id": 3,
+      "question": "Which SQL command is used to retrieve data from a database?",
+      "options": ["INSERT", "DELETE", "SELECT", "UPDATE"],
+      "correctAnswer": 2
+    },
+    {
+      "id": 4,
+      "question": "What is a foreign key?",
+      "options": ["A key that uniquely identifies a record in a table", "A key that establishes a relationship between two tables", "A key used for encryption", "A key used to index data"],
+      "correctAnswer": 1
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of normalization in a database?",
+      "options": ["To improve query performance", "To remove data redundancy", "To enforce foreign keys", "To increase table size"],
+      "correctAnswer": 1
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is a DML command?",
+      "options": ["CREATE", "DROP", "SELECT", "INSERT"],
+      "correctAnswer": 3
+    },
+    {
+      "id": 7,
+      "question": "What does ACID stand for in the context of transactions?",
+      "options": ["Atomicity, Consistency, Isolation, Durability", "Access, Control, Integrity, Data", "Accuracy, Completeness, Isolation, Durability", "All Consistent In Data"],
+      "correctAnswer": 0
+    },
+    {
+      "id": 8,
+      "question": "Which type of key prevents duplicate entries in a column?",
+      "options": ["Primary key", "Foreign key", "Unique key", "Candidate key"],
+      "correctAnswer": 2
+    },
+    {
+      "id": 9,
+      "question": "What is the result of a Cartesian product in SQL?",
+      "options": ["Combines rows from two tables with matching values", "Joins all rows from two tables", "Joins rows from two tables based on conditions", "Combines rows from two tables without a condition"],
+      "correctAnswer": 3
+    },
+    {
+      "id": 10,
+      "question": "Which of the following is a valid SQL aggregate function?",
+      "options": ["COUNT", "SUM", "AVG", "All of the above"],
+      "correctAnswer": 3
+    }
+  ]
+}
