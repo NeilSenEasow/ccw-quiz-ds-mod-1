@@ -2,73 +2,123 @@
   "questions": [
     {
       "id": 1,
-      "question": "What does DBMS stand for?",
-      "options": ["Database Management System", "Data Manipulation System", "Database Monitoring Service", "Data Backup Management System"],
+      "question": "Given two tables, Employee(EmpID, Name, DeptID) and Department(DeptID, DeptName), which SQL query correctly retrieves a list of employees along with their department names?",
+      "options": [
+        "SELECT EmpID, Name, DeptName FROM Employee INNER JOIN Department ON Employee.DeptID = Department.DeptID;",
+        "SELECT EmpID, Name, DeptName FROM Employee CROSS JOIN Department;",
+        "SELECT EmpID, Name, DeptName FROM Employee FULL OUTER JOIN Department ON Employee.DeptID = Department.DeptID;",
+        "SELECT EmpID, Name FROM Employee LEFT JOIN Department ON Employee.DeptID = Department.DeptID;"
+      ],
       "correctAnswer": 0,
-      "explanation": "DBMS stands for Database Management System. It is software used to store, retrieve, and manage data efficiently in databases."
+      "explanation": "An INNER JOIN retrieves matching records from both tables based on the condition specified (Employee.DeptID = Department.DeptID)."
     },
     {
       "id": 2,
-      "question": "Which of the following is a primary key candidate?",
-      "options": ["A unique attribute", "A foreign key", "A composite key", "A derived attribute"],
-      "correctAnswer": 0,
-      "explanation": "A primary key candidate is an attribute or a set of attributes that can uniquely identify each record in a table."
+      "question": "Which of the following data structures is best suited to implement a database index?",
+      "options": [
+        "Hash Table",
+        "Binary Search Tree",
+        "B+ Tree",
+        "Linked List"
+      ],
+      "correctAnswer": 2,
+      "explanation": "B+ Trees are widely used for database indexing because they provide balanced tree properties and allow range queries efficiently."
     },
     {
       "id": 3,
-      "question": "Which SQL command is used to retrieve data from a database?",
-      "options": ["INSERT", "DELETE", "SELECT", "UPDATE"],
+      "question": "If a table contains 10,000 rows and a query performs a linear search, what is the worst-case time complexity?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
       "correctAnswer": 2,
-      "explanation": "The SELECT command is used in SQL to query and retrieve data from a database table."
+      "explanation": "In a linear search, the worst-case scenario requires traversing all n rows, resulting in O(n) complexity."
     },
     {
       "id": 4,
-      "question": "What is a foreign key?",
-      "options": ["A key that uniquely identifies a record in a table", "A key that establishes a relationship between two tables", "A key used for encryption", "A key used to index data"],
-      "correctAnswer": 1,
-      "explanation": "A foreign key is a field in one table that refers to the primary key in another table, establishing a relationship between the two."
+      "question": "Which of the following operations results in a higher cost in terms of time complexity in a relational database?",
+      "options": [
+        "Selection",
+        "Insertion",
+        "Natural Join",
+        "Projection"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A natural join compares all common attributes of the tables, which can result in a Cartesian product followed by filtering, making it computationally expensive."
     },
     {
       "id": 5,
-      "question": "What is the purpose of normalization in a database?",
-      "options": ["To improve query performance", "To remove data redundancy", "To enforce foreign keys", "To increase table size"],
-      "correctAnswer": 1,
-      "explanation": "Normalization is a process in database design used to reduce redundancy and dependency by organizing data into related tables."
+      "question": "What is the primary difference between B-Tree and B+ Tree in database indexing?",
+      "options": [
+        "B-Trees store all data in leaf and internal nodes, whereas B+ Trees store data only in leaf nodes.",
+        "B+ Trees are unbalanced, whereas B-Trees are balanced.",
+        "B+ Trees do not allow sequential access, while B-Trees do.",
+        "B-Trees are faster than B+ Trees for range queries."
+      ],
+      "correctAnswer": 0,
+      "explanation": "B+ Trees allow efficient sequential access as all data entries are stored in leaf nodes, unlike B-Trees."
     },
     {
       "id": 6,
-      "question": "Which of the following is a DML command?",
-      "options": ["CREATE", "DROP", "SELECT", "INSERT"],
-      "correctAnswer": 3,
-      "explanation": "INSERT is a Data Manipulation Language (DML) command used to add data to a table in a database."
+      "question": "Which of the following ensures concurrency control in a DBMS?",
+      "options": [
+        "Two-phase locking protocol",
+        "Hashing technique",
+        "B+ Tree indexing",
+        "Foreign key constraints"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The two-phase locking (2PL) protocol ensures serializability by dividing the transaction execution into two phases: the growing phase (acquiring locks) and the shrinking phase (releasing locks), preventing conflicts."
     },
     {
       "id": 7,
-      "question": "What does ACID stand for in the context of transactions?",
-      "options": ["Atomicity, Consistency, Isolation, Durability", "Access, Control, Integrity, Data", "Accuracy, Completeness, Isolation, Durability", "All Consistent In Data"],
-      "correctAnswer": 0,
-      "explanation": "ACID properties ensure reliable processing in a database: Atomicity guarantees all-or-nothing execution, Consistency ensures valid data states, Isolation prevents interference between transactions, and Durability ensures completed transactions are permanent."
+      "question": "What is the advantage of using views in SQL?",
+      "options": [
+        "They improve query performance.",
+        "They enhance security by restricting access to specific data.",
+        "They reduce storage space.",
+        "They allow for faster data insertion."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Views allow users to see only specific columns or rows of a table without direct access to the base table, enhancing security and abstraction."
     },
     {
       "id": 8,
-      "question": "Which type of key prevents duplicate entries in a column?",
-      "options": ["Primary key", "Foreign key", "Unique key", "Candidate key"],
-      "correctAnswer": 2,
-      "explanation": "A unique key ensures that all values in the column are unique, preventing duplicate entries."
+      "question": "In a transaction, which property ensures that all operations are completed successfully before committing?",
+      "options": [
+        "Consistency",
+        "Atomicity",
+        "Isolation",
+        "Durability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Atomicity ensures that a transaction is treated as a single, indivisible unit, meaning either all operations succeed, or none take effect, preventing partial updates."
     },
     {
       "id": 9,
-      "question": "What is the result of a Cartesian product in SQL?",
-      "options": ["Combines rows from two tables with matching values", "Joins all rows from two tables", "Joins rows from two tables based on conditions", "Combines rows from two tables without a condition"],
-      "correctAnswer": 3,
-      "explanation": "A Cartesian product results from a SQL query without a WHERE clause, combining each row from one table with every row from another."
+      "question": "Which normal form eliminates partial dependency in a relational database?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "BCNF"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Second Normal Form (2NF) removes partial dependency by ensuring that non-key attributes are fully functionally dependent on the primary key, avoiding redundancy."
     },
     {
       "id": 10,
-      "question": "Which of the following is a valid SQL aggregate function?",
-      "options": ["COUNT", "SUM", "AVG", "All of the above"],
-      "correctAnswer": 3,
-      "explanation": "Aggregate functions like COUNT, SUM, and AVG are used to perform calculations on a set of values in SQL. 'All of the above' is correct."
+      "question": "If a query with a GROUP BY clause is executed without an aggregate function, what will happen?",
+      "options": [
+        "It will return an error.",
+        "It will return duplicate rows.",
+        "It will group rows but not apply any calculations.",
+        "It will return all rows without grouping."
+      ],
+      "correctAnswer": 0,
+      "explanation": "The GROUP BY clause requires at least one aggregate function (such as COUNT, SUM, AVG) to produce meaningful results; otherwise, the SQL engine throws an error."
     }
   ]
 }
