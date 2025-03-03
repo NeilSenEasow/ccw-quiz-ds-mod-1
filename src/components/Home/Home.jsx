@@ -8,14 +8,6 @@ const Home = ({ onStart }) => (
         <Brain className="w-16 h-16 text-blue-600" />
       </div>
       <h1 className="text-4xl font-bold mb-4 text-gray-800">DBMS Module 1 Quiz</h1>
-      <p className="text-lg text-gray-600 mb-8">
-        Challenge yourself with this interactive Database Management quiz!
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <Feature icon={Target} title="10 Questions" />
-        <Feature icon={Award} title="Detailed Explanations" />
-        <Feature icon={Clock} title="Track Your Progress" />
-      </div>
       <button
         onClick={onStart}
         className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"

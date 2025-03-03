@@ -2,123 +2,123 @@
   "questions": [
     {
       "id": 1,
-      "question": "Given two tables, Employee(EmpID, Name, DeptID) and Department(DeptID, DeptName), which SQL query correctly retrieves a list of employees along with their department names?",
+      "question": "Which of the following statements about ACID properties in DBMS is true?",
       "options": [
-        "SELECT EmpID, Name, DeptName FROM Employee INNER JOIN Department ON Employee.DeptID = Department.DeptID;",
-        "SELECT EmpID, Name, DeptName FROM Employee CROSS JOIN Department;",
-        "SELECT EmpID, Name, DeptName FROM Employee FULL OUTER JOIN Department ON Employee.DeptID = Department.DeptID;",
-        "SELECT EmpID, Name FROM Employee LEFT JOIN Department ON Employee.DeptID = Department.DeptID;"
+        "Atomicity ensures that all parts of a transaction are completed successfully or none at all.",
+        "Consistency guarantees that transactions always leave the database in a fixed state, regardless of failures.",
+        "Isolation ensures that transactions occur independently without interference.",
+        "All of the above"
       ],
-      "correctAnswer": 0,
-      "explanation": "An INNER JOIN retrieves matching records from both tables based on the condition specified (Employee.DeptID = Department.DeptID)."
+      "correctAnswer": 3,
+      "explanation": "ACID properties ensure reliability in databases. Atomicity, Consistency, Isolation, and Durability work together to maintain data integrity."
     },
     {
       "id": 2,
-      "question": "Which of the following data structures is best suited to implement a database index?",
+      "question": "Which indexing technique is most efficient for large-scale range queries?",
       "options": [
-        "Hash Table",
-        "Binary Search Tree",
-        "B+ Tree",
-        "Linked List"
+        "Hash Indexing",
+        "B-Tree Indexing",
+        "Bitmap Indexing",
+        "Linear Probing"
       ],
-      "correctAnswer": 2,
-      "explanation": "B+ Trees are widely used for database indexing because they provide balanced tree properties and allow range queries efficiently."
+      "correctAnswer": 1,
+      "explanation": "B-Tree indexing is widely used for database indexing due to its ability to efficiently handle range queries and maintain balanced tree properties."
     },
     {
       "id": 3,
-      "question": "If a table contains 10,000 rows and a query performs a linear search, what is the worst-case time complexity?",
+      "question": "A transaction schedule is said to be conflict-serializable if: ",
       "options": [
-        "O(1)",
-        "O(log n)",
-        "O(n)",
-        "O(n log n)"
+        "It is equivalent to a serial schedule after swapping non-conflicting operations.",
+        "It ensures that all transactions are executed sequentially.",
+        "It avoids deadlocks by enforcing a strict execution order.",
+        "It guarantees higher performance compared to all other scheduling methods."
       ],
-      "correctAnswer": 2,
-      "explanation": "In a linear search, the worst-case scenario requires traversing all n rows, resulting in O(n) complexity."
+      "correctAnswer": 0,
+      "explanation": "Conflict-serializability ensures that a schedule can be transformed into a serial schedule by swapping non-conflicting operations, maintaining transaction correctness."
     },
     {
       "id": 4,
-      "question": "Which of the following operations results in a higher cost in terms of time complexity in a relational database?",
+      "question": "Which of the following anomaly occurs due to a violation of 3rd Normal Form (3NF)?",
       "options": [
-        "Selection",
-        "Insertion",
-        "Natural Join",
-        "Projection"
+        "Insertion Anomaly",
+        "Deletion Anomaly",
+        "Update Anomaly",
+        "All of the above"
       ],
-      "correctAnswer": 2,
-      "explanation": "A natural join compares all common attributes of the tables, which can result in a Cartesian product followed by filtering, making it computationally expensive."
+      "correctAnswer": 3,
+      "explanation": "3NF eliminates transitive dependencies, preventing insertion, deletion, and update anomalies. A violation leads to redundant data and inconsistencies."
     },
     {
       "id": 5,
-      "question": "What is the primary difference between B-Tree and B+ Tree in database indexing?",
+      "question": "Which of the following is a key advantage of using multiversion concurrency control (MVCC) in databases?",
       "options": [
-        "B-Trees store all data in leaf and internal nodes, whereas B+ Trees store data only in leaf nodes.",
-        "B+ Trees are unbalanced, whereas B-Trees are balanced.",
-        "B+ Trees do not allow sequential access, while B-Trees do.",
-        "B-Trees are faster than B+ Trees for range queries."
+        "It eliminates the need for locking mechanisms.",
+        "It reduces transaction isolation overhead.",
+        "It allows for simultaneous reads and writes without conflicts.",
+        "All of the above"
       ],
-      "correctAnswer": 0,
-      "explanation": "B+ Trees allow efficient sequential access as all data entries are stored in leaf nodes, unlike B-Trees."
+      "correctAnswer": 3,
+      "explanation": "MVCC improves performance by allowing transactions to operate on different versions of data, reducing contention and ensuring consistency."
     },
     {
       "id": 6,
-      "question": "Which of the following ensures concurrency control in a DBMS?",
+      "question": "What is the primary advantage of using a clustered index in a database?",
       "options": [
-        "Two-phase locking protocol",
-        "Hashing technique",
-        "B+ Tree indexing",
-        "Foreign key constraints"
+        "It speeds up DELETE operations.",
+        "It ensures data is stored in sorted order, improving range queries.",
+        "It allows multiple indexes per table.",
+        "It reduces the size of the database."
       ],
-      "correctAnswer": 0,
-      "explanation": "The two-phase locking (2PL) protocol ensures serializability by dividing the transaction execution into two phases: the growing phase (acquiring locks) and the shrinking phase (releasing locks), preventing conflicts."
+      "correctAnswer": 1,
+      "explanation": "A clustered index keeps data stored in sorted order, significantly improving the efficiency of range queries."
     },
     {
       "id": 7,
-      "question": "What is the advantage of using views in SQL?",
+      "question": "Which SQL isolation level provides the highest level of data consistency but may lead to reduced concurrency?",
       "options": [
-        "They improve query performance.",
-        "They enhance security by restricting access to specific data.",
-        "They reduce storage space.",
-        "They allow for faster data insertion."
+        "Read Uncommitted",
+        "Read Committed",
+        "Repeatable Read",
+        "Serializable"
       ],
-      "correctAnswer": 1,
-      "explanation": "Views allow users to see only specific columns or rows of a table without direct access to the base table, enhancing security and abstraction."
+      "correctAnswer": 3,
+      "explanation": "The Serializable isolation level prevents all concurrency issues but restricts parallel transactions, leading to reduced performance."
     },
     {
       "id": 8,
-      "question": "In a transaction, which property ensures that all operations are completed successfully before committing?",
+      "question": "What is the purpose of the WAL (Write-Ahead Logging) mechanism in databases?",
       "options": [
-        "Consistency",
-        "Atomicity",
-        "Isolation",
-        "Durability"
+        "To ensure changes are immediately committed to the database.",
+        "To maintain a log of transactions for rollback and recovery.",
+        "To improve indexing efficiency.",
+        "To reduce disk storage requirements."
       ],
       "correctAnswer": 1,
-      "explanation": "Atomicity ensures that a transaction is treated as a single, indivisible unit, meaning either all operations succeed, or none take effect, preventing partial updates."
+      "explanation": "Write-Ahead Logging ensures that changes are first recorded in logs before applying them to the database, enabling rollback and recovery in case of failures."
     },
     {
       "id": 9,
-      "question": "Which normal form eliminates partial dependency in a relational database?",
+      "question": "Which of the following is a primary cause of deadlocks in a DBMS?",
       "options": [
-        "1NF",
-        "2NF",
-        "3NF",
-        "BCNF"
+        "Too many concurrent transactions.",
+        "Unordered resource acquisition.",
+        "Excessive indexing.",
+        "Poor query optimization."
       ],
       "correctAnswer": 1,
-      "explanation": "Second Normal Form (2NF) removes partial dependency by ensuring that non-key attributes are fully functionally dependent on the primary key, avoiding redundancy."
+      "explanation": "Deadlocks occur when transactions acquire resources in an inconsistent order, leading to circular waits."
     },
     {
       "id": 10,
-      "question": "If a query with a GROUP BY clause is executed without an aggregate function, what will happen?",
+      "question": "Which algorithm is commonly used for query optimization in a DBMS?",
       "options": [
-        "It will return an error.",
-        "It will return duplicate rows.",
-        "It will group rows but not apply any calculations.",
-        "It will return all rows without grouping."
+        "Dijkstra’s Algorithm",
+        "Gradient Descent",
+        "Cost-Based Optimization",
+        "A* Search Algorithm"
       ],
-      "correctAnswer": 0,
-      "explanation": "The GROUP BY clause requires at least one aggregate function (such as COUNT, SUM, AVG) to produce meaningful results; otherwise, the SQL engine throws an error."
+      "correctAnswer": 2,
+      "explanation": "Cost-Based Optimization (CBO) is widely used in query optimizers to determine the most efficient execution plan by evaluating different strategies."
     }
   ]
 }
